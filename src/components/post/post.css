@@ -1,0 +1,50 @@
+.post {
+  width: 360px;
+  line-height: 1rem;
+}
+
+.post-autor-date-views {
+  display: flex;
+  align-items: center;
+}
+
+.post-autor-circle {
+  padding: 0.3rem;
+}
+
+.post-tags {
+  font-size: 1rem;
+  color: #eb0028;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.post-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.post-autor {
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.post-date {
+  color: #9b9b9b;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.post-views {
+  color: #9b9b9b;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.post-text {
+  color: #9b9b9b;
+  font-weight: 400;
+  font-size: 1rem;
+}

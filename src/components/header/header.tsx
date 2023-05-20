@@ -1,8 +1,14 @@
-export function Header() {
+import Logo from "../logo/logo";
+import Menu from "../menu/menu";
+import "./header.css";
+
+function Header() {
   return (
     <div className="header">
-      <div className="logo">LOGOTYPE</div>
-      <div className="menu"> menu </div>
+      <Logo />
+      <Menu />
     </div>
   );
 }
+
+export default Header;
