@@ -1,4 +1,4 @@
-import { dataFromApi } from "../../data/data";
+import { circle, dataFromApi } from "../../data/data";
 import "./post.css";
 
 export interface PostProps {
@@ -6,18 +6,6 @@ export interface PostProps {
 }
 
 const Post = ({ data }: PostProps) => {
-  const circle: JSX.Element = (
-    <svg
-      className="post-autor-circle"
-      width="3"
-      height="4"
-      viewBox="0 0 3 4"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-      <circle cx="1.5" cy="2" r="1.5" fill="#D7D7D7" />
-    </svg>
-  );
-
   return (
     <div className="post">
       <div className="post-img">

@@ -1,6 +1,7 @@
 .post {
   width: 360px;
   line-height: 1rem;
+  cursor: pointer;
 }
 
 .post-autor-date-views {
