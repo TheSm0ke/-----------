@@ -10,8 +10,8 @@ const Posts = () => {
     fetch(urlForDataPosts)
       .then((res) => res.json())
       .then((data: dataFromApi[]) => {
-        const newData = data.map((el) => {
-          return <Post data={el} />;
+        const newData = data.map((el, index) => {
+          return <Post data={el} key={index} />;
         });
         setDataForPosts(newData);
         console.log(newData);

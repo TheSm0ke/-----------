@@ -9,7 +9,7 @@ const MenuItem = ({ text, subItems }: MenuItemProps) => {
   const subMenu = subItems.map((el, index) => {
     if (index + 1 === subItems.length) {
       return (
-        <li className="menu-item-level-3">
+        <li className="menu-item-level-3" key={index}>
           <p>{el}</p>
           <svg
             width="6"
@@ -27,7 +27,10 @@ const MenuItem = ({ text, subItems }: MenuItemProps) => {
       );
     }
     return (
-      <li className="menu-item-level-3" style={{ borderBottom: "1px solid #E9E9E9" }}>
+      <li
+        className="menu-item-level-3"
+        style={{ borderBottom: "1px solid #E9E9E9" }}
+        key={index}>
         <p>{el}</p>
         <svg
           width="6"
