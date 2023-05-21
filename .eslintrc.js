@@ -1,5 +1,5 @@
 module.exports = {
-  extends: "airbnb-typescript-prettier",
+  extends: ["airbnb-typescript-prettier"],
   rules: {
     "import/no-anonymous-default-export": "off",
     "import/prefer-default-export": "off",

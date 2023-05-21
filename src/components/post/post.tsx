@@ -5,7 +5,7 @@ export interface PostProps {
   data: dataFromApi;
 }
 
-function Post({ data }: PostProps) {
+const Post = ({ data }: PostProps) => {
   const circle: JSX.Element = (
     <svg
       className="post-autor-circle"
@@ -45,6 +45,6 @@ function Post({ data }: PostProps) {
       </div>
     </div>
   );
-}
+};
 
 export default Post;

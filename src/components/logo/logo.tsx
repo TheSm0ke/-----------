@@ -1,6 +1,6 @@
 import "./logo.css";
 
-function Logo() {
+const Logo = () => {
   return (
     <div className="logo">
       <svg
@@ -18,6 +18,6 @@ function Logo() {
       </svg>
     </div>
   );
-}
+};
 
 export default Logo;

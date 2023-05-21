@@ -6,3 +6,37 @@
 .arrow-down {
   margin: 10px;
 }
+
+.menu-item-level-1 {
+  display:flex;
+  align-items: center;
+}
+
+.menu-item-level-2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #e9e9e9;
+  font-weight: 400;
+  min-width: 11rem;
+  font-size: 0.8rem;
+  padding: 0 1rem 0 1rem;
+}
+
+.menu-item-level-1:hover > .menu-item-level-2 {
+  display:inline-block;
+}
+
+.menu-item-level-3 {
+  cursor: pointer;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item-level-3:hover {
+  color: #969696;
+  margin-left: 0.2rem;
+}

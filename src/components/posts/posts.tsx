@@ -3,7 +3,7 @@ import { urlForDataPosts, dataFromApi } from "../../data/data";
 import Post from "../post/post";
 import "./posts.css";
 
-function Posts() {
+const Posts = () => {
   const [dataForPosts, setDataForPosts] = useState<JSX.Element[]>([]);
 
   useEffect(() => {
@@ -17,8 +17,7 @@ function Posts() {
         console.log(newData);
       });
   }, []);
-
   return <div className="posts">{dataForPosts}</div>;
-}
+};
 
 export default Posts;
