@@ -23,8 +23,7 @@ const Modal = ({ openModal, onOpenModal, content }: ModalProps) => {
         <div className="modal-header">
           <div className="modal-header-title">
             <p style={{ margin: "0" }}>
-              {content.autor} {circle} {content.tags} {circle} {content.date} {circle}{" "}
-              {content.views}
+              {content.autor} {circle} {content.date} {circle} {content.views}
             </p>
           </div>
           <div className="modal-header-cross" onClick={() => onOpenModal(false)}>
@@ -39,13 +38,13 @@ const Modal = ({ openModal, onOpenModal, content }: ModalProps) => {
               srcSet={content.img_2x}
               width="360px"
               height="230px"
-              loading="lazy" /* srcSet={`${data.img},${}`} */
+              loading="lazy"
             />
           </div>
           <div className="modal-content-tags">
             <p>{content.tags}</p>
           </div>
-          <div className="">
+          <div className="modal-content-text">
             <p>{content.text}</p>
           </div>
         </div>

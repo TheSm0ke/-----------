@@ -8,7 +8,7 @@
 }
 
 .menu-item-level-1 {
-  display:flex;
+  display: flex;
   align-items: center;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .menu-item-level-1:hover > .menu-item-level-2 {
-  display:inline-block;
+  display: inline-block;
 }
 
 .menu-item-level-3 {

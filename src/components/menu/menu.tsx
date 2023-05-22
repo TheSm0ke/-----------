@@ -1,3 +1,4 @@
+import Input from "components/input-search-with-button/input";
 import MenuItem from "../menu-item/menu-item";
 import "./menu.css";
 
@@ -18,6 +19,7 @@ const Menu = () => {
         <MenuItem text="Features" subItems={subMenu} />
         <MenuItem text="Categories" subItems={subMenu} />
         <MenuItem text="Buy Now" subItems={subMenu} />
+        <Input />
       </ul>
     </nav>
   );
