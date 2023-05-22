@@ -3,7 +3,13 @@
 }
 
 .menu-search-input {
-  width: 100px;
+  width: 3rem;
+  border: 0px;
+  border-bottom: 1px solid black;
+}
+
+.menu-search-input:focus {
+  outline: none;
 }
 
 .menu-search-button {
@@ -11,5 +17,4 @@
 }
 
 .menu-search-button {
-  transform: translateX(130px);
 }
