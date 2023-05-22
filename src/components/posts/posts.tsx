@@ -1,23 +1,15 @@
-import { useEffect, useState } from "react";
-import { urlForDataPosts, dataFromApi } from "../../data/data";
-import Post from "../post/post";
+import { urlForDataPosts } from "../../data/data";
 import "./posts.css";
+import { useDataFromJson } from "hooks/useDataFromJson";
 
-const Posts = () => {
-  const [dataForPosts, setDataForPosts] = useState<JSX.Element[]>([]);
+interface PostsProps {
+  onOpenModal: (el) => void;
+  onContent: (el) => void;
+}
 
-  useEffect(() => {
-    fetch(urlForDataPosts)
-      .then((res) => res.json())
-      .then((data: dataFromApi[]) => {
-        const newData = data.map((el, index) => {
-          return <Post data={el} key={index} />;
-        });
-        setDataForPosts(newData);
-        console.log(newData);
-      });
-  }, []);
-  return <div className="posts">{dataForPosts}</div>;
+const Posts = ({ onOpenModal, onContent }: PostsProps) => {
+  const newData = useDataFromJson({ urlForDataPosts, onOpenModal, onContent });
+  return <div className="posts">{newData}</div>;
 };
 
 export default Posts;

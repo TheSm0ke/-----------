@@ -3,11 +3,18 @@ import "./post.css";
 
 export interface PostProps {
   data: dataFromApi;
+  onOpenModal: (el: Boolean) => void;
+  onContent: (el) => void;
 }
 
-const Post = ({ data }: PostProps) => {
+const Post = ({ data, onOpenModal, onContent }: PostProps) => {
+  const handleClick = () => {
+    onContent(data);
+    onOpenModal(true);
+  };
+
   return (
-    <div className="post">
+    <div className="post" onClick={handleClick}>
       <div className="post-img">
         <img
           src={data.img}

@@ -5,9 +5,12 @@ import "./header.css";
 
 const Header = () => {
   const [backMenu, setBackMenu] = useState(false);
+  const [height, setHeight] = useState(0);
 
   const handleScroll = () => {
-    if (window.scrollY > 200) {
+    const height = document.getElementById("header")?.offsetHeight;
+    if (window.scrollY > Number(height)) {
+      setHeight(Number(height));
       setBackMenu(true);
     } else {
       setBackMenu(false);
@@ -21,14 +24,14 @@ const Header = () => {
 
   if (backMenu)
     return (
-      <div className="header" style={{ top: "-200px" }}>
+      <div className="header" id="header" style={{ top: `-${height}px` }}>
         <Logo />
         <Menu />
       </div>
     );
 
   return (
-    <div className="header">
+    <div className="header" id="header">
       <Logo />
       <Menu />
     </div>
