@@ -1,5 +1,4 @@
-.header {
-  height: 8.75rem;
+.header {  
   position: sticky;
   position: -webkit-sticky; /* Для safari */
   top: 0px;
