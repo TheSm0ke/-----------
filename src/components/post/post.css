@@ -49,3 +49,12 @@
   font-weight: 400;
   font-size: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .post {
+    width: 320px;
+  }
+  .post-img img {
+    width: 320px;
+  }
+}

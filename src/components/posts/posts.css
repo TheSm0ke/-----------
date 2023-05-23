@@ -7,9 +7,3 @@
   justify-content: center;
   flex-direction: row;
 }
-
-@media screen and (max-width: 768px) {
-  .posts {
-    width: 500px;
-  }
-}
