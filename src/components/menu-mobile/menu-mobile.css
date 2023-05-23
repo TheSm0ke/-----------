@@ -1,0 +1,27 @@
+.menu-mobile {
+  display: none;
+  gap: 3rem;
+  justify-content: center;
+  height: 6rem;
+  list-style: none;
+  position: relative;
+  align-items: center;
+  transition: all 1s ease-in-out;
+}
+
+.menu-mobile-logo {
+  min-width: 11rem;
+}
+
+.menu-mobile-search {
+  min-width: 3rem;
+}
+
+@media (max-width: 500px) {
+  .menu-mobile {
+    display: flex;
+  }
+  .menu-mobile-logo {
+    display: block;
+  }
+}

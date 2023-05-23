@@ -7,3 +7,10 @@
   transition: top 1s ease-in-out;
   z-index: 1;
 }
+
+@media (max-width: 500px) {
+  .header {
+    position: unset;
+    height: 6rem;
+  }
+}

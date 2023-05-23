@@ -1,3 +1,4 @@
+import { MenuMobile } from "components/menu-mobile/menu-mobile";
 import { useEffect, useState } from "react";
 import Logo from "../logo/logo";
 import Menu from "../menu/menu";
@@ -30,13 +31,17 @@ const Header = ({ handleChange }: HeaderProps) => {
     return (
       <div className="header" id="header" style={{ top: `-${height}px` }}>
         <Logo />
+        <MenuMobile />
         <Menu onChange={handleChange} />
       </div>
     );
 
   return (
     <div className="header" id="header">
-      <Logo />
+      <div className="logo">
+        <Logo />
+      </div>
+      <MenuMobile />
       <Menu onChange={handleChange} />
     </div>
   );

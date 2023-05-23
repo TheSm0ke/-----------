@@ -13,3 +13,9 @@
     width: 500px;
   }
 }
+
+@media (max-width: 375px) {
+  .posts {
+    justify-content: space-between;
+  }
+}

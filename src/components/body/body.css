@@ -4,3 +4,9 @@
   justify-content: center;
   position: relative;
 }
+
+@media (max-width: 500px) {
+  .body {
+    padding: 0;
+  }
+}
