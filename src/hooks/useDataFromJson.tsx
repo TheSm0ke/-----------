@@ -6,12 +6,14 @@ interface useDataFromJsonProps {
   urlForDataPosts: string;
   onOpenModal: (el) => void;
   onContent: (el) => void;
+  filter?: string;
 }
 
 export const useDataFromJson = ({
   urlForDataPosts,
   onOpenModal,
   onContent,
+  filter,
 }: useDataFromJsonProps) => {
   const [newData, setNewData] = useState<JSX.Element[]>([]);
 
@@ -20,12 +22,18 @@ export const useDataFromJson = ({
       .then((res) => res.json())
       .then((data: dataFromApi[]) => {
         const newData = data.map((el, index) => {
+          if (Number(filter?.length) > 0) {
+            console.log(filter);
+          }
           return (
             <Post data={el} key={index} onOpenModal={onOpenModal} onContent={onContent} />
           );
         });
         setNewData(newData);
+      })
+      .catch((res) => {
+        console.log(res);
       });
-  }, [onContent, onOpenModal, urlForDataPosts]);
+  }, [filter, onContent, onOpenModal, urlForDataPosts]);
   return newData;
 };

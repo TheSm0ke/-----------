@@ -4,7 +4,11 @@ import "./body.css";
 import { useState } from "react";
 import { dataFromApi } from "data/data";
 
-const Body = () => {
+interface BodyProps {
+  filter: string;
+}
+
+const Body = ({ filter }: BodyProps) => {
   const [openModal, setOpenModal] = useState(false);
   const [content, setContent] = useState<dataFromApi>({
     title: "",
@@ -24,6 +28,7 @@ const Body = () => {
         openModal={openModal}
         onOpenModal={(el) => setOpenModal(el)}
       />
+      {filter}
       <Posts onOpenModal={(el) => setOpenModal(el)} onContent={setContent} />
     </div>
   );

@@ -3,7 +3,11 @@ import Logo from "../logo/logo";
 import Menu from "../menu/menu";
 import "./header.css";
 
-const Header = () => {
+interface HeaderProps {
+  handleChange: (el: string) => void;
+}
+
+const Header = ({ handleChange }: HeaderProps) => {
   const [backMenu, setBackMenu] = useState(false);
   const [height, setHeight] = useState(0);
 
@@ -26,14 +30,14 @@ const Header = () => {
     return (
       <div className="header" id="header" style={{ top: `-${height}px` }}>
         <Logo />
-        <Menu />
+        <Menu onChange={handleChange} />
       </div>
     );
 
   return (
     <div className="header" id="header">
       <Logo />
-      <Menu />
+      <Menu onChange={handleChange} />
     </div>
   );
 };

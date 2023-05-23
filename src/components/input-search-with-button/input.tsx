@@ -1,14 +1,13 @@
 import { search } from "data/data";
-import { useState } from "react";
 import "./input.css";
 
-const Input = () => {
-  const [valueInput, setValueInput] = useState("");
+interface InputProps {
+  onChange: (el: string) => void;
+}
 
+const Input = ({ onChange }: InputProps) => {
   const handleKeyDown = (el) => {
-    console.log(el.target.value);
-    valueInput;
-    setValueInput(el.target.value);
+    onChange(String(el.target.value));
   };
 
   return (
