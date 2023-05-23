@@ -5,7 +5,13 @@
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .body {
+    padding: 0;
+  }
+}
+
+@media screen and (hover: none) and (pointer: coarse) {
   .body {
     padding: 0;
   }

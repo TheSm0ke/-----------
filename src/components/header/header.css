@@ -4,11 +4,18 @@
   position: -webkit-sticky; /* Для safari */
   top: 0px;
   background: white;
-  transition: top 1s ease-in-out;
+  transition: top 0.5s ease-in-out;
   z-index: 1;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .header {
+    position: unset;
+    height: 6rem;
+  }
+}
+
+@media screen and (hover: none) and (pointer: coarse) {
   .header {
     position: unset;
     height: 6rem;

@@ -1,7 +1,7 @@
 .menu-mobile {
   display: none;
   gap: 3rem;
-  justify-content: center;
+  justify-content: space-around;
   height: 6rem;
   list-style: none;
   position: relative;
@@ -17,7 +17,16 @@
   min-width: 3rem;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .menu-mobile {
+    display: flex;
+  }
+  .menu-mobile-logo {
+    display: block;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
   .menu-mobile {
     display: flex;
   }

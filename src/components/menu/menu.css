@@ -17,7 +17,13 @@
   transition: all 1s ease-in-out;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .menu {
+    display: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
   .menu {
     display: none;
   }

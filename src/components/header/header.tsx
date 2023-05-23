@@ -1,8 +1,8 @@
-import { MenuMobile } from "components/menu-mobile/menu-mobile";
 import { useEffect, useState } from "react";
 import Logo from "../logo/logo";
 import Menu from "../menu/menu";
 import "./header.css";
+import { MenuMobile } from "components/menu-mobile/menu-mobile";
 
 interface HeaderProps {
   handleChange: (el: string) => void;
@@ -30,7 +30,9 @@ const Header = ({ handleChange }: HeaderProps) => {
   if (backMenu)
     return (
       <div className="header" id="header" style={{ top: `-${height}px` }}>
-        <Logo />
+        <div className="logo">
+          <Logo />
+        </div>
         <MenuMobile />
         <Menu onChange={handleChange} />
       </div>

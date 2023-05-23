@@ -5,7 +5,13 @@
   padding: 2rem;
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  .logo {
+    display: none;
+  }
+}
+
+@media screen and (hover: none) and (pointer: coarse) {
   .logo {
     display: none;
   }

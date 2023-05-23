@@ -8,14 +8,8 @@
   flex-direction: row;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .posts {
     width: 500px;
-  }
-}
-
-@media (max-width: 375px) {
-  .posts {
-    justify-content: space-between;
   }
 }
