@@ -1,5 +1,5 @@
 import Post from "components/post/post";
-import { dataFromApi } from "data/data";
+import { dataFromApi, noData } from "data/data";
 import { useEffect, useState } from "react";
 
 interface useDataFromJsonProps {
@@ -27,14 +27,32 @@ export const useDataFromJson = ({
       return newData;
     };
 
+    const emptyPost = (
+      <div
+        style={{
+          height: "auto",
+          width: "10rem",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          fontWeight: "700",
+        }}>
+        {noData}
+        <p>No data</p>
+      </div>
+    );
+
     fetch(urlForDataPosts)
       .then((res) => res.json())
       .then((data: dataFromApi[]) => {
         if (Number(filter?.length) > 0) {
           const filteredData = data.filter(
-            (el) => el.text.includes(String(filter)) || el.title.includes(String(filter))
+            (el) =>
+              el.text.toLowerCase().includes(String(filter).toLowerCase()) ||
+              el.title.toLowerCase().includes(String(filter).toLowerCase())
           );
           setNewData(fromDataToJsx(filteredData));
+          if (filteredData.length === 0) setNewData([emptyPost]);
         } else {
           setNewData(fromDataToJsx(data));
         }
