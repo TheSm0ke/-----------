@@ -9,7 +9,7 @@ const Main = () => {
   return (
     <>
       <Header handleChange={setSearchValue} />
-      <Body filter={searchValue} />
+      <Body filterValue={searchValue} />
     </>
   );
 };

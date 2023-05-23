@@ -5,10 +5,10 @@ import { useState } from "react";
 import { dataFromApi } from "data/data";
 
 interface BodyProps {
-  filter: string;
+  filterValue: string;
 }
 
-const Body = ({ filter }: BodyProps) => {
+const Body = ({ filterValue }: BodyProps) => {
   const [openModal, setOpenModal] = useState(false);
   const [content, setContent] = useState<dataFromApi>({
     title: "",
@@ -28,8 +28,11 @@ const Body = ({ filter }: BodyProps) => {
         openModal={openModal}
         onOpenModal={(el) => setOpenModal(el)}
       />
-      {filter}
-      <Posts onOpenModal={(el) => setOpenModal(el)} onContent={setContent} />
+      <Posts
+        filter={filterValue}
+        onOpenModal={(el) => setOpenModal(el)}
+        onContent={setContent}
+      />
     </div>
   );
 };
