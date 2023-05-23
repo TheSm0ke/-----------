@@ -1,0 +1,40 @@
+.hidden-menu {
+  position: fixed;
+  min-width: 18rem;
+  max-width: max-content;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #E9E9E9;
+  z-index: 1;
+}
+
+.hidden-menu-menu {
+  padding: 0;
+}
+
+.hidden-menu-header {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  border: 1px solid #E9E9E9;
+}
+
+.hidden-menu-item {
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.hidden-menu-item:not(:last-child) {
+  border-bottom: 1px solid #E9E9E9;
+}
+
+.hidden-menu-header-cross {
+  stroke: black;
+}
+
+.hidden-menu-header-logo svg{
+  height: 24px;
+}

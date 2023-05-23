@@ -11,10 +11,3 @@
 .menu-search-input:focus {
   outline: none;
 }
-
-.menu-search-button {
-  transition: all 1s ease-in-out;
-}
-
-.menu-search-button {
-}

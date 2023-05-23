@@ -8,19 +8,8 @@ interface MenuItemProps {
 
 const MenuItem = ({ text, subItems }: MenuItemProps) => {
   const subMenu = subItems.map((el, index) => {
-    if (index + 1 === subItems.length) {
-      return (
-        <li className="menu-item-level-3" key={index}>
-          <p>{el}</p>
-          {arrowLeft}
-        </li>
-      );
-    }
     return (
-      <li
-        className="menu-item-level-3"
-        style={{ borderBottom: "1px solid #E9E9E9" }}
-        key={index}>
+      <li className="menu-item-level-3" key={index}>
         <p>{el}</p>
         {arrowLeft}
       </li>
