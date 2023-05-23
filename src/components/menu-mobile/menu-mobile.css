@@ -4,7 +4,6 @@
   justify-content: space-around;
   height: 6rem;
   list-style: none;
-  position: relative;
   align-items: center;
   transition: all 1s ease-in-out;
 }
@@ -23,6 +22,12 @@
   }
   .menu-mobile-logo {
     display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .menu-mobile {
+    justify-content: space-between;
   }
 }
 
