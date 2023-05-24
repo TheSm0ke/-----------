@@ -1,12 +1,14 @@
+import Input from "components/input-search-with-button/input";
 import Logo from "components/logo/logo";
-import { hamburger, search } from "data/data";
+import { hamburger } from "data/data";
 import "./menu-mobile.css";
 
 interface MenuMobileProps {
   onClick: () => void;
+  onChange: (el: string) => void;
 }
 
-export const MenuMobile = ({ onClick }: MenuMobileProps) => {
+export const MenuMobile = ({ onClick, onChange }: MenuMobileProps) => {
   return (
     <div className="menu-mobile">
       <div className="menu-mobile-hamburger" onClick={onClick}>
@@ -15,7 +17,9 @@ export const MenuMobile = ({ onClick }: MenuMobileProps) => {
       <div className="menu-mobile-logo">
         <Logo />
       </div>
-      <div className="menu-mobile-search">{search}</div>
+      <div className="menu-mobile-search">
+        <Input onChange={onChange} />
+      </div>
     </div>
   );
 };

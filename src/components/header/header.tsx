@@ -34,7 +34,7 @@ const Header = ({ handleChange, openMenu }: HeaderProps) => {
         <div className="logo">
           <Logo />
         </div>
-        <MenuMobile onClick={openMenu} />
+        <MenuMobile onChange={handleChange} onClick={openMenu} />
         <Menu onChange={handleChange} />
       </div>
     );
@@ -44,7 +44,7 @@ const Header = ({ handleChange, openMenu }: HeaderProps) => {
       <div className="logo">
         <Logo />
       </div>
-      <MenuMobile onClick={openMenu} />
+      <MenuMobile onChange={handleChange} onClick={openMenu} />
       <Menu onChange={handleChange} />
     </div>
   );

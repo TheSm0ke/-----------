@@ -16,7 +16,7 @@ const Main = () => {
       setLeftPositionX("0rem");
       setDisplayBackground("block");
     } else {
-      setLeftPositionX("-18rem");
+      setLeftPositionX("-18.2rem");
       setDisplayBackground("none");
     }
   }, [leftPositionHiddenMenu]);
