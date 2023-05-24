@@ -6,9 +6,10 @@ import { MenuMobile } from "components/menu-mobile/menu-mobile";
 
 interface HeaderProps {
   handleChange: (el: string) => void;
+  openMenu: () => void;
 }
 
-const Header = ({ handleChange }: HeaderProps) => {
+const Header = ({ handleChange, openMenu }: HeaderProps) => {
   const [backMenu, setBackMenu] = useState(false);
   const [height, setHeight] = useState(0);
 
@@ -33,7 +34,7 @@ const Header = ({ handleChange }: HeaderProps) => {
         <div className="logo">
           <Logo />
         </div>
-        <MenuMobile />
+        <MenuMobile onClick={openMenu} />
         <Menu onChange={handleChange} />
       </div>
     );
@@ -43,7 +44,7 @@ const Header = ({ handleChange }: HeaderProps) => {
       <div className="logo">
         <Logo />
       </div>
-      <MenuMobile />
+      <MenuMobile onClick={openMenu} />
       <Menu onChange={handleChange} />
     </div>
   );

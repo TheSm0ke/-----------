@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Body from "../body/body";
 import Header from "../header/header";
 import "./main.css";
@@ -7,15 +7,32 @@ import { arrowDown, cross } from "data/data";
 
 const Main = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [leftPositionHiddenMenu, setLeftPositionHiddenMenu] = useState(false);
+  const [leftPositionX, setLeftPositionX] = useState("-18rem");
+  const [displayBackground, setDisplayBackground] = useState("none");
+
+  useEffect(() => {
+    if (leftPositionHiddenMenu) {
+      setLeftPositionX("0rem");
+      setDisplayBackground("block");
+    } else {
+      setLeftPositionX("-18rem");
+      setDisplayBackground("none");
+    }
+  }, [leftPositionHiddenMenu]);
 
   return (
     <>
-      <div className="hidden-menu">
+      <div className="hidden-menu" style={{ left: `${leftPositionX}` }}>
         <div className="hidden-menu-header">
           <div className="hidden-menu-header-logo">
             <Logo />
           </div>
-          <div className="hidden-menu-header-cross">{cross}</div>
+          <div
+            className="hidden-menu-header-cross"
+            onClick={() => setLeftPositionHiddenMenu(!leftPositionHiddenMenu)}>
+            {cross}
+          </div>
         </div>
         <div className="hidden-menu-item">
           <p>Demos</p>
@@ -38,7 +55,15 @@ const Main = () => {
           {arrowDown}
         </div>
       </div>
-      <Header handleChange={setSearchValue} />
+      <div
+        className="hidden-background"
+        onClick={() => setLeftPositionHiddenMenu(!leftPositionHiddenMenu)}
+        style={{ display: `${displayBackground}` }}
+      />
+      <Header
+        openMenu={() => setLeftPositionHiddenMenu(!leftPositionHiddenMenu)}
+        handleChange={setSearchValue}
+      />
       <Body filterValue={searchValue} />
     </>
   );
