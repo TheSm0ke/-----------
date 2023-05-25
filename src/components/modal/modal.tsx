@@ -9,7 +9,6 @@ interface ModalProps {
 
 const Modal = ({ openModal, onOpenModal, content }: ModalProps) => {
   const handleClick = (el) => {
-    console.log(el);
     if (el.target.className === "modal") {
       onOpenModal(false);
     }
