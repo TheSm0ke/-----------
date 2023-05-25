@@ -40,8 +40,8 @@ const Modal = ({ openModal, onOpenModal, content }: ModalProps) => {
               loading="lazy"
             />
           </div>
-          <div className="modal-content-tags">
-            <p>{content.tags}</p>
+          <div className="modal-content-title">
+            <p>{content.title}</p>
           </div>
           <div className="modal-content-text">
             <p>{content.text}</p>
